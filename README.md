@@ -173,5 +173,3 @@ https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js
 里面适用存放一些静态资源，如第三方库，可以在static下新建lib目录，再在里面新建对应的目录和添加文件
 
 
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
