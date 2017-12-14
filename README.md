@@ -48,7 +48,7 @@ export function getUserWinningRecord(payload) {
 ```
 
 ### 调用示例
-```js
+```html
 //user.vue
 <template>
   <div class="sub-item-wrapper">
