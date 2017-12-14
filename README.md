@@ -157,7 +157,12 @@ export const subList = state => state.subList
 export const currentBtn = state => state.currentBtn
 export const btnText = state => state.btnText
 
+
+// 需要提醒大家的是，要用store，不要忘记还要在main.js中引用注册一下
 ```
+
+### 调用方式
+以上的store的调用方式，就请移步到相关代码中查看好了(https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js)
 
 
 
