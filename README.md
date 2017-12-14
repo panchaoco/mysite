@@ -172,4 +172,7 @@ https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js
 ### 关于static目录
 里面适用存放一些静态资源，如第三方库，可以在static下新建lib目录，再在里面新建对应的目录和添加文件
 
+### 最后
+如果还有什么不足的地方，大家提下，然后做相应的调整
+
 
