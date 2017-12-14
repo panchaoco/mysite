@@ -167,7 +167,7 @@ export const btnText = state => state.btnText
 
 ### 调用方式
 以上的store的调用方式，就请移步到相关代码中查看好了，下面是链接：
-(https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js)
+https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js
 
 ### 关于static目录
 里面适用存放一些静态资源，如第三方库，可以在static下新建lib目录，再在里面新建对应的目录和添加文件
