@@ -35,7 +35,7 @@ export function getUserInfo(payload) {
 // 获取用户中奖纪录
 export function getUserWinningRecord(payload) {
   // typeof payload = 'object
-  let url = 'http://192.168.10.54:9091/userInfo';
+  let url = 'http://192.168.10.54:9091/userWinningRecord';
   axios.get(url, {
     params: payload
   }).then((res) => {
