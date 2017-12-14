@@ -112,10 +112,12 @@ const state = {
 
 export default state
 
+
 //mutation-type.js 用于配置与state里面一一对应的需要改变的数据的常量名，示例如下：
 export const SET_SUB_LIST = 'SET_SUB_LIST'
 export const SET_CURRENT_BTN = 'SET_CURRENT_BTN'
 export const SET_BTN_TEXT = 'SET_BTN_TEXT'
+
 
 //mutation.js 用户触发mutation，由此达到改变state数据的功能，示例如下：
 
@@ -135,22 +137,25 @@ const mutations = {
 
 export default mutations
 
+
 //actions.js用于触发多个mutation，并执行一些额外操作时（action适情况而定使用）,示例如下
 import * as types from './mutation-types'
 
-const mutations = {
-  [types.SET_SUB_LIST](state, list) {
-    state.subList = list;
-  },
-  [types.SET_CURRENT_BTN](state, currentBtn) {
-    state.currentBtn = currentBtn
-  },
-  [types.SET_BTN_TEXT](state, text) {
-    state.btnText = text
-  }
+export const clearAll = function ({commit, state}, {list, currentBtn, text}) {
+  commit(types.SET_SUB_LIST, list)
+  commit(types.SET_CURRENT_BTN, currentBtn)
+  commit(types.SET_BTN_TEXT, text)
 }
 
-export default mutations
+/**
+  getters.js用于获取state中的数据，不推荐用this.$store.state.subList的方式获取，推荐使用辅助...mapGetters的方式获取，
+  需要注意的是，当用辅助函数获取数据时，需要将mapGetters放到computed计算器属性中
+*/
+
+// getters的示例代码如下：
+export const subList = state => state.subList
+export const currentBtn = state => state.currentBtn
+export const btnText = state => state.btnText
 
 ```
 
