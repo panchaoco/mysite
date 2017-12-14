@@ -8,6 +8,8 @@ Vue项目基本结构
 ### common目录
 
 common目录用存放通用于的一些图片、样式文件和脚本文件，因此可在下方再新建images、stylus（根据项目采用的css预编译语法来）、scripts三个二级目录。
+如果用到一些第三方UI框架或者项目本身需要一些全局性的样式配置， 期望在common下的stylus下新建reset.styl,然后在main.js通过import "common/stylus/reset.styl"
+配置一些全局样式时，需要再新建一个variable.styl(变量)文件，然后在reset中@require 或者 @import "./variable.styl"，这样便能统一管理了
 
 ### api
 
@@ -163,6 +165,25 @@ export const btnText = state => state.btnText
 
 
 // 需要提醒大家的是，要用store，不要忘记还要在main.js中引用注册一下
+// main.js
+import Vue from 'vue'
+import App from './App'
+import router from './router'
+import store from './store'
+
+import 'common/stylus/reset.styl'
+
+Vue.config.productionTip = false
+
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  template: '<App/>',
+  components: { App }
+})
+
 ```
 
 ### 调用方式
