@@ -79,7 +79,7 @@ export function getUserWinningRecord(payload) {
 如果项目中需要用到vuex，便需要在src目录下新建与common同级的目录store目录，然后在store里面新建state.js、mutation.js、mutation-type.js、actions.js、getters.js、index.js这几个目录
 
 ```js
-//index.js用于调用vuex插件，而注册mutation和state等相关的功能，示例如下：
+//index.js用于调用vuex插件，和注册mutation和state等相关的功能，示例如下：
 
 import Vue from 'vue'
 import Vuex from 'vuex'
