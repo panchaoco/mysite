@@ -139,6 +139,10 @@ export default mutations
 
 
 //actions.js用于触发多个mutation，并执行一些额外操作时（action适情况而定使用）,示例如下
+/**
+  action中函数只能接口两个参数，一个为官方提供的解构参数{commit, state},另外一个是我们要传入的参数，注意:
+  如果我们需要传入多个参数时，也要用解构参数的方式传递，也就是传入一个对象，对象里面包含我们的参数
+*/
 import * as types from './mutation-types'
 
 export const clearAll = function ({commit, state}, {list, currentBtn, text}) {
@@ -162,7 +166,11 @@ export const btnText = state => state.btnText
 ```
 
 ### 调用方式
-以上的store的调用方式，就请移步到相关代码中查看好了(https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js)
+以上的store的调用方式，就请移步到相关代码中查看好了，下面是链接：
+(https://github.com/pc1995/mysite/blob/master/src/components/sub-item/sub-item.js)
+
+### 关于static目录
+里面适用存放一些静态资源，如第三方库，可以在static下新建lib目录，再在里面新建对应的目录和添加文件
 
 
 

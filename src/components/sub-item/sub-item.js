@@ -1,3 +1,4 @@
+//先导入
 import {mapGetters, mapMutations, mapActions} from 'vuex'
 
 export default {
@@ -27,7 +28,7 @@ export default {
     console.log(this.subList)
 
   },
-  computed: {
+  computed: { //mapGetters放到计算器属性
     ...mapGetters([
       'subList',
       'currentBtn',
@@ -35,11 +36,13 @@ export default {
     ])
   },
   methods: {
+    // mapMutations放到methods中，推荐用别名的方式来映射到对应mutation，调用方式就为this.saveSubList(args)就行了
     ...mapMutations({
-      saveSubList: 'SET_SUB_LIST',
+      saveSubList: 'SET_SUB_LIST', // 将 `this.saveSubList()` 映射为 `this.$store.commit('SET_SUB_LIST')
       saveCurrentBtn: 'SET_CURRENT_BTN',
       saveText: 'SET_BTN_TEXT'
     }),
+    // mapActions因为我们就是以骆驼峰的方式命名的，因为不用映射，参数直接为数组即可
     ...mapActions([
       'clearAll'
     ]),
