@@ -18,7 +18,7 @@ common目录用存放通用于的一些图片、样式文件和脚本文件，�
 
 ### getUserInfo示例
 
-```getUserInfo
+```js
 // 获取用户基础信息
 export function getUserInfo(payload) {
   // typeof payload = 'object'
@@ -48,7 +48,7 @@ export function getUserWinningRecord(payload) {
 ```
 
 ### 调用示例
-```user
+```js
 //user.vue
 <template>
   <div class="sub-item-wrapper">
@@ -78,7 +78,7 @@ export function getUserWinningRecord(payload) {
 ## 关于Vuex中的Store
 如果项目中需要用到vuex，便需要在src目录下新建与common同级的目录store目录，然后在store里面新建state.js、mutation.js、mutation-type.js、actions.js、getters.js、index.js这几个目录
 
-```index
+```js
 //index.js用于调用vuex插件，而注册mutation和state等相关的功能，示例如下：
 
 import Vue from 'vue'
@@ -87,7 +87,7 @@ import * as actions from './actions'
 import * as getters from './getters'
 import state from './state'
 import mutations from './mutations'
-import createLogger from 'vuex/dist/logger'
+import createLogger from 'vuex/dist/logger' // logger用于打印vuex数据的改变日志
 
 Vue.use(Vuex)
 
