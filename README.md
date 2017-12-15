@@ -154,7 +154,7 @@ export const clearAll = function ({commit, state}, {list, currentBtn, text}) {
 }
 
 /**
-  getters.js用于获取state中的数据，不推荐用this.$store.state.subList的方式获取，推荐使用辅助...mapGetters的方式获取，
+  getters.js用于获取state中的数据，不推荐用this.$store.state.subList的方式获取，推荐使用辅助函数...mapGetters的方式获取，
   需要注意的是，当用辅助函数获取数据时，需要将mapGetters放到computed计算器属性中
 */
 
